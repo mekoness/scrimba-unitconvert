@@ -11,5 +11,7 @@ const massText = document.getElementById("mass-txt");
 
 button.addEventListener("click", function() {
     let numToConvert = document.getElementById("num-box").value;
-    lengthText.textContent = numToConvert;
+    lengthText.textContent = `${numToConvert} meters = ${numToConvert} feet | ${numToConvert} feet = ${numToConvert} meters`;
+    volumeText.textContent = `${numToConvert} liters = ${numToConvert} gallons | ${numToConvert} gallons = ${numToConvert} liters`;
+    massText.textContent = `${numToConvert} kilos = ${numToConvert} pounds | ${numToConvert} pounds = ${numToConvert} kilod`;
 })
