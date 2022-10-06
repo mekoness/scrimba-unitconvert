@@ -13,13 +13,12 @@ button.addEventListener("click", function() {
     const gallonsToLiters = numToConvert / 0.264;
     const kilosToPounds = numToConvert * 2.204;
     const poundsToKilos = numToConvert / 2.204;
+    const textOptions = [
+        `${numToConvert} meters = ${metersToFeet.toFixed(3)} feet | ${numToConvert} feet = ${feetToMeters.toFixed(2)} meters`,
+        `${numToConvert} liters = ${litersToGallons.toFixed(3)} gallons | ${numToConvert} gallons = ${gallonsToLiters.toFixed(2)} liters`,
+        `${numToConvert} kilos = ${kilosToPounds.toFixed(3)} pounds | ${numToConvert} pounds = ${poundsToKilos.toFixed(2)} kilos`
+    ]
     for (let i = 0; i < textList.length; i++) {
-        if (textList[i] === lengthText) {
-            textList[i].textContent = `${numToConvert} meters = ${metersToFeet.toFixed(3)} feet | ${numToConvert} feet = ${feetToMeters.toFixed(2)} meters`;
-        } else if (textList[i] === volumeText) {
-            textList[i].textContent = `${numToConvert} liters = ${litersToGallons.toFixed(3)} gallons | ${numToConvert} gallons = ${gallonsToLiters.toFixed(2)} liters`;
-        } else if (textList[i] === massText) {
-            textList[i].textContent = `${numToConvert} kilos = ${kilosToPounds.toFixed(3)} pounds | ${numToConvert} pounds = ${poundsToKilos.toFixed(2)} kilos`;
-        }        
-    };
+        textList[i].textContent = textOptions[i]
+        };
 });
